@@ -1,0 +1,15 @@
+.homeContent-geek{
+	margin-top: 166px;
+	width: 100%;
+}
+.homeContent-geek img{
+	width: 100%;
+}
+.homeContent-tech{
+	font-family: "微软雅黑";
+	font-size: 24px;
+	color: #fff;
+	text-align: center;
+	margin-top: 50px;
+	cursor: pointer;
+}

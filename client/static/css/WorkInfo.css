@@ -1,0 +1,24 @@
+.workInfoContent-img{
+	width: 433px;
+	height: 365px;
+	background: rgba(255,255,255,.1);
+	margin-left: 150px;
+	margin-top: 50px;
+	display: inline-block;
+	float: left;
+}
+.workInfoContent-intro{
+	float: left;
+	color: #ecf0f5;
+	font-family: "微软雅黑";
+	margin-left: 80px;
+	margin-top: 30px;
+}
+.workInfoContent-title{
+	font-size: 36px;
+}
+.workInfoContent-introBody{
+	margin-top: 44px;
+	font-size: 18px;
+	line-height: 30px;
+}

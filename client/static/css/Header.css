@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	width: 100%;
+	height: 126px;
+}
+.logo{
+	float: left;
+	height: 126px;
+}
+.logo-img{
+	
+}
+.nav{
+	float: right;
+	margin-right: 20%;
+	cursor: pointer;
+	margin-top: 60px;
+}
+.nav li{
+	list-style: none;
+	display: inline-block;
+	float: left;
+	color: #fff;
+	margin-left: 117px;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	cursor: pointer;
+	padding-bottom: 5px;
+}
+.nav li:first-child{
+	border-bottom: 2px solid rgba(255,255,255,.1);
+}
+.navBorder{
+	border-bottom: 2px solid rgba(255,255,255,.1);
+}
+.nav li a{
+	color: #fff;
+	text-decoration: none;
+}

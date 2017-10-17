@@ -1,0 +1,16 @@
+.workContent{
+	text-align: center;
+	margin-top: 100px;
+}
+.workContent ul{
+	display: inline-block;
+}
+.workContent-img{
+	float: left;
+	list-style: none;
+	width: 228px;
+	height: 313px;
+	background: rgba(255,255,255,.1);
+	margin: 0 30px;
+	cursor: pointer;
+}

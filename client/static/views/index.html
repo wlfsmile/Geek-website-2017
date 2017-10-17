@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Geek</title>
+</head>
+<style type="text/css">
+	body{
+		background: url("./client/static/images/bg.jpg") no-repeat;
+		background-size:100% ;
+		-moz-background-size:100%; 
+	}
+	/*清除浮动*/
+	.clear{
+		clear:both
+	}
+	.clearfix:after{
+		content:".";
+		display:block;
+		height:0;
+		font-size:0;
+		clear:both;
+		visibility:hidden;
+	}
+	.clearfix{
+		zoom:1;
+	}
+</style>
+<body>
+	<div id="root"></div>
+	<script type="text/javascript" src="./client/static/output/bundle.js"></script>
+</body>
+</html>

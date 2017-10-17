@@ -1,0 +1,94 @@
+.memberTab{
+	text-align: center;
+}
+
+/*Tab的导航*/
+.memberTab-Nav{
+	margin-left: 236px;
+}
+.memberTab-Nav ul li{
+	list-style: none;
+	float: left;
+	color: #fff;
+	font-family: "微软雅黑";
+	font-size: 30px;
+	margin-top: 50px;
+	margin-right: 45px;
+	cursor: pointer;
+	padding-bottom: 7px;
+}
+.memberTab-Nav ul li:first-child{
+	border-bottom: 2px solid rgba(255,255,255,.1);
+}
+.memberTab-Info-item {
+	width: 998px;
+	display: inline-block;
+	margin-top: 38px;
+	text-align: left;
+}
+
+/*每一个成员（包含翻转动画）*/
+.container{
+	perspective:1000;
+	transform-style:preserve-3d;
+	width: 207px;
+	height: 297px;
+	display: inline-block;
+	margin: 0px 20px 0px;
+	text-align: center;
+}
+.memberTab-Info-flip{
+	width: 207px;
+	height: 297px;
+	background-color: #ecf0f5;
+	background: rgba(255,255,255,.1);
+	cursor: pointer;
+	position: relative;
+	transition:0.6s;
+	transform-style:preserve-3d;
+}
+.flip-front-img{
+	display: block;
+	width: 146px;
+	height: 146px;
+	border-radius: 50%;
+	margin: 17px auto 22px;
+}
+.memberTab-Info-flip p{
+	font-size: 24px;
+	font-family: "微软雅黑";
+	color: #ecf0f5;
+}
+.flip-front,.flip-back{
+	width: 207px;
+	height: 297px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility:hidden;
+}
+.flip-front{
+	z-index: 9;
+}
+.flip-back{
+	transform:rotateY(-180deg);
+}
+.container:hover .memberTab-Info-flip{transform:rotateY(180deg);}
+
+.flip-back p{
+	margin-top: 20px;
+	text-align: left;
+	text-indent: 2em;
+}
+/*箭头*/
+.prev,.next{
+	 display: inline-block; 
+	 cursor: pointer;
+}
+.prev{
+	margin-right: 60px;
+}
+.next{
+	margin-left: 60px;
+}
+

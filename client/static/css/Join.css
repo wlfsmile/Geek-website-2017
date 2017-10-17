@@ -1,0 +1,60 @@
+.joinContent{
+	margin-top: 64px;
+}
+.joinContent{
+	display: inline-block;
+	margin-left: 165px;
+}
+.joinContent-tab{
+	float: left;
+	margin-top: 50px;
+}
+.joinContent-tab ul{
+	text-align: center;
+}
+.joinContent-tab ul li{
+	list-style: none;
+	color: #ecf0f5;
+	font-family: "微软雅黑";
+	font-size: 30px;
+	width: 170px;
+	height: 45px;
+	border: 2px solid #ecf0f5;
+	border-radius: 10px;
+	margin-top: 33px;
+	cursor: pointer;
+}
+.joinContent-intro{
+	float: left;
+	margin-left: 113px;
+	font-family: "微软雅黑";
+	color: #ecf0f5;
+}
+.joinContent-title{
+	font-size: 36px;
+}
+.joinContent-job{
+	font-size: 30px;
+	margin-top: 24px;
+}
+.joinContent-require{
+	font-size: 18px;
+	margin-top: 25px;
+	margin-left: 20px;
+	line-height: 30px;
+}
+.joinButton{
+	width: 255px;
+	height: 73px;
+	background: rgba(255,255,255,.2);
+	border-radius: 10px;
+	float: right;
+	margin-right: 72px;
+	color: #ecf0f5;
+	font-size: 36px;
+	font-family: "微软雅黑";
+	text-align: center;
+	line-height: 73px;
+	cursor: pointer;
+	text-decoration: none;
+}

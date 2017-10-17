@@ -1,0 +1,40 @@
+.joinFromContent{
+	margin-top: 40px;
+}
+
+#submitFrom{
+	color: #ecf0f5;
+	font-family: "微软雅黑";
+	line-height: 40px;
+	font-size: 24px;
+	line-height: 34px;
+	width: 319px;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+#submitFrom p{
+	margin-bottom: 30px;
+	text-align: right;
+}
+#submitFrom p input{
+	background: rgba(255,255,255,.0);
+	border: 2px solid rgba(255,255,255,.2);
+	border-radius: 7px;
+	/*outline: none; */
+	width: 180px;
+	height: 30px;
+	padding-left: 15px;
+	display: inline-block;
+}
+.submitButton{
+	width: 100px;
+	height: 40px;
+	color: #ecf0f5;
+	background: rgba(255,255,255,.1);
+	font-size: 24px;
+	line-height: 40px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}

@@ -39197,10 +39197,11 @@ var MemberContent = function (_Component) {
 			_jquery2.default.ajax({
 				url: url,
 				type: "GET",
+				dataType: 'json',
 				success: function success(data) {
 					console.log(data);
 					//if (data.message == "success") {
-					var items = data.memberData;
+					var items = data;
 					_this2.setState({
 						totalData: items,
 						totalPage: Math.ceil(items.length / _this2.state.pageSize)

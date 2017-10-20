@@ -39,10 +39,11 @@ class MemberContent extends Component{
 		$.ajax({
 			url : url,
 			type : "GET",
+			dataType: 'json',
 			success : (data) => {
 				console.log(data);
 				//if (data.message == "success") {
-					let items = data.memberData;
+					let items = data;
 					this.setState({
 						totalData : items,
 						totalPage : Math.ceil(items.length/this.state.pageSize),

@@ -39183,7 +39183,7 @@ var MemberContent = function (_Component) {
 	_createClass(MemberContent, [{
 		key: 'componentDidMount',
 		value: function componentDidMount() {
-			var url = "http://rapapi.org/mockjsdata/20244/memberNow";
+			var url = "/getAllOldMembers";
 			this.setAjax(url);
 		}
 
@@ -39198,16 +39198,17 @@ var MemberContent = function (_Component) {
 				url: url,
 				type: "GET",
 				success: function success(data) {
-					if (data.message == "success") {
-						var items = data.memberData;
-						_this2.setState({
-							totalData: items,
-							totalPage: Math.ceil(items.length / _this2.state.pageSize)
-						});
-						_this2.setPage(_this2.state.num);
-					} else {
-						alert("error");
-					}
+					console.log(data);
+					//if (data.message == "success") {
+					var items = data.memberData;
+					_this2.setState({
+						totalData: items,
+						totalPage: Math.ceil(items.length / _this2.state.pageSize)
+					});
+					_this2.setPage(_this2.state.num);
+					//}else{
+					//	alert("error");
+					//}
 				},
 				error: function error() {
 					alert("请求失败");
@@ -39220,7 +39221,7 @@ var MemberContent = function (_Component) {
 	}, {
 		key: 'setNow',
 		value: function setNow() {
-			var url = "http://rapapi.org/mockjsdata/20244/memberNow";
+			var url = "/getAllOldMembers";
 			this.setAjax(url);
 			this.setState({
 				current: 1,
@@ -39233,7 +39234,7 @@ var MemberContent = function (_Component) {
 	}, {
 		key: 'setOld',
 		value: function setOld() {
-			var url = "http://rapapi.org/mockjsdata/20244/memberOld";
+			var url = "/getAllOldMembers";
 			this.setAjax(url);
 			this.setState({
 				current: 1,

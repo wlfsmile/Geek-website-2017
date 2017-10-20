@@ -30,7 +30,7 @@ class MemberContent extends Component{
 	
 	//请求所有数据
 	componentDidMount(){
-		let url = "http://rapapi.org/mockjsdata/20244/memberNow";
+		let url = "/getAllOldMembers";
 		this.setAjax(url);
 	}
 
@@ -40,16 +40,17 @@ class MemberContent extends Component{
 			url : url,
 			type : "GET",
 			success : (data) => {
-				if (data.message == "success") {
+				console.log(data);
+				//if (data.message == "success") {
 					let items = data.memberData;
 					this.setState({
 						totalData : items,
 						totalPage : Math.ceil(items.length/this.state.pageSize),
 					});
 					this.setPage(this.state.num); 
-				}else{
-					alert("error");
-				}
+				//}else{
+				//	alert("error");
+				//}
 			},
 			error : () => {
 				alert("请求失败");
@@ -59,7 +60,7 @@ class MemberContent extends Component{
 
 	//现有成员
 	setNow(){			
-		let url = "http://rapapi.org/mockjsdata/20244/memberNow"
+		let url = "/getAllOldMembers"
 		this.setAjax(url);
 		this.setState({
 			current : 1,
@@ -69,7 +70,7 @@ class MemberContent extends Component{
 
 	//已毕业成员
 	setOld(){
-		let url = "http://rapapi.org/mockjsdata/20244/memberOld"
+		let url = "/getAllOldMembers"
 		this.setAjax(url);
 		this.setState({
 			current : 1,

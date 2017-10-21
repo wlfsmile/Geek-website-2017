@@ -1,9 +1,15 @@
+//var webpack = require('webpack');
+//var path = require('path');
+
+//var hotMiddlewareScript = 'webpack-hot-middleware/client/static?reload=true'
+
 module.exports = {
   	entry: './views/index.js',
   	output: {
       path:__dirname + '/output',
     	filename: 'bundle.js'
-  	},
+		},
+	//	devtool: 'source-map',
   	module: {
     	loaders: [
     	{
@@ -23,5 +29,11 @@ module.exports = {
       loader: 'style-loader!css-loader'
     }
     ]
-  }
+	}
+	// ,
+	// plugins: [
+  //       new webpack.optimize.OccurenceOrderPlugin(),
+  //       new webpack.HotModuleReplacementPlugin(),
+  //       new webpack.NoErrorsPlugin()
+  // ]
 };

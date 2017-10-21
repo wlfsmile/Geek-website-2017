@@ -1,30 +1,20 @@
-var express = require('express');
-var router = express.Router();
-var dbHandle = require('../dbbase/dbHandle');
+//var express = require('express');
+//var router = express.Router();
+//var dbHandle = require('../dbbase/dbHandle');
+//var app = express();
 // var oldMembers = require('../dbbase/dbHandle').oldMember;
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index.html');
-});
 
-router.get('/getAllOldMembers',function(req,res,next){
-  var oldMembers = dbHandle.getModel('oldMember');
-  oldMembers.find({},function(err,resData){
-    if(err){
-      res.json({
-        'status':0,
-        'message':'获取毕业成员失败'
-      })
-    }else{
-      res.json({
-        'status':1,
-        'message':'获取成功',
-        'memberData':resData
-      })
-    }
+module.exports = function(app){
+  /* GET home page. */
+  app.get('/', (req, res, next)=>{
+    res.render('index.html');
   });
-})
 
+  // app.use('/member',require('./member'));
 
-module.exports = router;
+  // app.use('/work',require('./work'));
+
+  // app.use('/join',require('./join'));
+
+};

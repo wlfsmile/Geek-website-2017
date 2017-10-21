@@ -32,10 +32,6 @@ module.exports = {
         }
     },
     work:{
-        id:{
-            type: Number,
-            require: true
-        },
         workName:{
             type: String,
             require: true

@@ -14,14 +14,14 @@ class WorkContent extends Component{
 	}
 
 	componentDidMount(){
-		let url = "http://rapapi.org/mockjsdata/20244/work";
+		let url = "/work/getWorks";
 		$.ajax({
 			url: url,
 			type : "GET",
 			success : (data) =>{
-				if(data.message == "success"){
+				if(data.status == 1){
 					this.setState({
-						workList : data.data
+						workList : data.workData
 					});
 				}else{
 					alert("失败");
@@ -41,8 +41,8 @@ class WorkContent extends Component{
 				{
 					workList.map((count,i) => {
 						return (
-							<Link to={"/work/"+count.id} key={i} >
-								<img src={count.img} className="workContent-img" />
+							<Link to={"/work/"+count._id} key={i} >
+								<img src={count.workImg} className="workContent-img" />
 							</Link>
 						);
 					})

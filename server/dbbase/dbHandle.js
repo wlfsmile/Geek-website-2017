@@ -8,13 +8,14 @@ mongoose.connection.on("open",function(){
 });
 
 mongoose.connection.on("error",function(){
-    console.log('fail connent'+error);
+    console.log('fail connent');
 });
 
 var Schema = mongoose.Schema;
 
 for(var modelName in models){
     if(!db.modelName){
+        console.log(modelName);
         mongoose.model(modelName,new Schema(models[modelName]));
     }
 }

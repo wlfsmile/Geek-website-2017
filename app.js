@@ -5,9 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var ejs = require('ejs');
+//var routes = require('./server/routes/index.js');
 
-var index = require('./server/routes/index');
-var users = require('./server/routes/users');
+//var index = require('./server/routes/index');
+var member = require('./server/routes/member');
+var work = require('./server/routes/work');
+var join = require('./server/routes/join');
 
 var app = express();
 
@@ -29,12 +32,16 @@ app.use('/client/static', express.static(path.join(__dirname, 'client/static')))
 
 
 // 对所有(/)URL或路由返回index.html
-// app.get('/', function (req, res) {
-//     res.render('index.html');
-// });
+app.get('/', function (req, res) {
+    res.render('index.html');
+});
 
-app.use('/', index);
-app.use('/users', users);
+//路由
+//app.use('/',index);
+app.use('/member',member);
+app.use('/work',work);
+app.use('/join',join);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -28,9 +28,9 @@ class MemberContent extends Component{
 	}
 
 	
-	//请求所有数据
+	//请求初始数据/现有
 	componentDidMount(){
-		let url = "/getAllOldMembers";
+		let url = "/member/getAllNowMembers";
 		this.setAjax(url);
 	}
 
@@ -42,16 +42,16 @@ class MemberContent extends Component{
 			dataType: 'json',
 			success : (data) => {
 				console.log(data);
-				//if (data.message == "success") {
-					let items = data;
+				if (data.status == 1) {
+					let items = data.memberData;
 					this.setState({
 						totalData : items,
 						totalPage : Math.ceil(items.length/this.state.pageSize),
 					});
 					this.setPage(this.state.num); 
-				//}else{
-				//	alert("error");
-				//}
+				}else{
+					alert("error");
+				}
 			},
 			error : () => {
 				alert("请求失败");
@@ -61,7 +61,7 @@ class MemberContent extends Component{
 
 	//现有成员
 	setNow(){			
-		let url = "/getAllOldMembers"
+		let url = "/member/getAllNowMembers"
 		this.setAjax(url);
 		this.setState({
 			current : 1,
@@ -71,7 +71,7 @@ class MemberContent extends Component{
 
 	//已毕业成员
 	setOld(){
-		let url = "/getAllOldMembers"
+		let url = "/member/getAllOldMembers"
 		this.setAjax(url);
 		this.setState({
 			current : 1,

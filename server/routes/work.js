@@ -27,7 +27,8 @@ router.get('/getWorks/:workId',(req,res,next)=>{
     let work = dbHandle.getModel('work');
     let workId = req.params.workId;
     console.log(workId);
-    work.find({_id : wordId},(err,resData)=>{
+    work.findOne({_id : workId},(err,resData)=>{
+        console.log(err);
         if(err){
             res.json({
                 'status':0,

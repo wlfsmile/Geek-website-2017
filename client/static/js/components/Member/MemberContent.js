@@ -41,7 +41,6 @@ class MemberContent extends Component{
 			type : "GET",
 			dataType: 'json',
 			success : (data) => {
-				console.log(data);
 				if (data.status == 1) {
 					let items = data.memberData;
 					this.setState({

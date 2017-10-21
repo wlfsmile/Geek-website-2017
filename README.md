@@ -18,6 +18,9 @@ react+react-router+node.js+express+webpack+mongodb
 ##### 数据库
 + mongodb
 
+#### 项目结构简析
+
+
 #### 项目纪录
 + 配置webpack
 + node获取mongodb数据，并转化为想要的格式
